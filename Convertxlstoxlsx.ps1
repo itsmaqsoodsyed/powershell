@@ -1,7 +1,7 @@
 # set folders
-$downloadfolder = "C:\Users\w445488\Downloads\RPS"         # folder where the .xls files are
-$uploadfolder   = "C:\Users\w445488\Downloads\RPS\converted"  # folder that uploads the .xlsx files
-#$backupfolder   = "C:\Users\w445488\Downloads\RPS"  # folder that has .xls files as backup
+$downloadfolder = "C:\Users\username\Downloads\RPS"         # folder where the .xls files are
+$uploadfolder   = "C:\Users\username\Downloads\RPS\converted"  # folder that uploads the .xlsx files
+#$backupfolder   = "C:\Users\username\Downloads\RPS"  # folder that has .xls files as backup
 
 # open and convert xls to xlsx
 Add-Type -AssemblyName Microsoft.Office.Interop.Excel
