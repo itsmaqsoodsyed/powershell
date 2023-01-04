@@ -1,5 +1,5 @@
 # set folders
-$downloadfolder = "C:\Users\username\Downloads\RPS"         # folder where the .xls files are
+$downloadfolder = "C:\Users\username\Downloads\RPS"         # update username folder where the .xls files are
 $uploadfolder   = "C:\Users\username\Downloads\RPS\converted"  # folder that uploads the .xlsx files
 #$backupfolder   = "C:\Users\username\Downloads\RPS"  # folder that has .xls files as backup
 
