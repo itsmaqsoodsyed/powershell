@@ -1,1 +1,28 @@
 Useful Powershell code for daily use
+
+# Test network connectivity on a specific port
+Test-NetConnection  -Port 80 databaseserver
+
+# Find last boot up time of a computer/server
+wmic path Win32_OperatingSystem get LastBootUpTime
+
+# Execute a SQL job ()
+SQLCMD -S databaseserver -Q "exec msdb.dbo.sp_start_job @job_name = 'Jobname', @step_name ='Jobstep'"
+
+# Execute SQL query
+SQLCMD -S databaseserver -Q "SELECT top 10 column1, column2 from tablename" -y 15 -Y 15
+SQLCMD -S databaseserver -Q "TRUNCATE TABLE tablename"
+SQLCMD -S databaseserver -Q "SELECT TOP 10 * from tablename"
+
+# SQL Query results into a text file
+SQLCMD -S databaseserver -Q "SELECT top 10 column1, column2, columnn FROM tablename" -y 20 -Y 20 -o "V:\folder\subfolder\Output.txt"
+
+# Execute a SQL job ()
+SQLCMD -S databaseserver -Q "exec msdb.dbo.sp_start_job @job_name = 'randomJob', @step_name ='jobStep'"
+SQLCMD -S databaseserver -Q "exec msdb.dbo.sp_start_job @job_name = 'randomJob'"
+
+# Process cube (to be tested)
+#Invoke-ProcessCube -Name "someCube" -Database "databaseserver" -ProcessType "ProcessFull"
+
+# Check SSRS Subscription result
+SQLCMD -S databaseserver -Q "SELECT top 10  column1, column2, columnn FROM tablename order by column desc" -y 50 -Y 50
